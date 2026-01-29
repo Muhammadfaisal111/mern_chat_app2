@@ -3,9 +3,11 @@ import "./index.css";
 import App from "./App.jsx";
 import { BrowserRouter } from "react-router-dom";
 //import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Login from "./pages/authentication/Login.jsx";
-import SignUp from "./pages/authentication/SignUp.jsx";
-import Home from "./pages/Home/Home.jsx";
+//import Login from "./pages/authentication/Login.jsx";
+//import SignUp from "./pages/authentication/SignUp.jsx";
+//import Home from "./pages/Home/Home.jsx";
+import { store } from "./store/store.js";
+import { Provider } from "react-redux";
 
 /*const router = createBrowserRouter([
   { path: "/", element: <Home /> },
@@ -14,7 +16,9 @@ import Home from "./pages/Home/Home.jsx";
 ]);*/
 
 createRoot(document.getElementById("root")).render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+  <Provider store={store}>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </Provider>
 );

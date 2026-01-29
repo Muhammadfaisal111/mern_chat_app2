@@ -14,7 +14,6 @@ const SignUp = () => {
       [e.target.name]: e.target.value,
     }));
   };
-  console.log(SignUpData);
 
   return (
     <div className="min-h-screen flex items-center justify-center">
